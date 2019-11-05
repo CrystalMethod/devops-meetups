@@ -1,0 +1,6 @@
+config:
+  digitalocean:token:
+    secure: AAABACbtSFNo2gGCJXLaAHggSHFkxRjFP6FN3pEe03Ef0Wkz3gstZ5jy0mCTbOW6QRm3CyjeUxL6x0oLvOxGPWCoyJS1cZZP5OL+QE+AYGclMAVaEEgZrY+roy9jZRPL
+  doks-cluster:nodeCount: "2"
+  doks-cluster:region: fra1
+  doks-cluster:size: s-1vcpu-2gb

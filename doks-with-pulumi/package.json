@@ -1,0 +1,11 @@
+{
+    "name": "doks-cluster",
+    "devDependencies": {
+        "typescript": "^3.4.5",
+        "@types/node": "latest"
+    },
+    "dependencies": {
+        "@pulumi/pulumi": "latest",
+        "@pulumi/digitalocean": "latest"
+    }
+}
