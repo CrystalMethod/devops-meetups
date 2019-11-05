@@ -3,6 +3,8 @@ on:
   push:
     branches:
       - master
+    paths:
+      - doks-with-pulumi/*
 jobs:
   up:
     name: Update
@@ -11,7 +13,6 @@ jobs:
       - uses: actions/checkout@v1
         with:
           fetch-depth: 1
-      - run: scripts/build
       - uses: docker://pulumi/actions
         with:
           args: up
