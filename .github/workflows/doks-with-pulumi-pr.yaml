@@ -1,6 +1,8 @@
 name: Pulumi
 on:
-  - pull_request
+  pull_request:
+    paths:
+      - doks-with-pulumi/*
 jobs:
   preview:
     name: Preview
