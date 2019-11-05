@@ -1,0 +1,22 @@
+on:
+  pull_request:
+    paths:
+      - doks-with-pulumi/*
+name: Preview
+jobs:
+  preview:
+    name: Pulumi Preview (Merged Stack)
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v1
+        with:
+          fetch-depth: 1
+      - run: scripts/build
+      - name: Pulumi Preview (Merged Stack)
+        uses: docker://pulumi/actions
+        env:
+          PULUMI_ACCESS_TOKEN: ${{ secrets.PULUMI_ACCESS_TOKEN }}
+          PULUMI_CI: pr
+          PULUMI_ROOT: doks-with-pulumi/
+        with:
+          args: preview
