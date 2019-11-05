@@ -4,7 +4,7 @@ on:
       - doks-with-pulumi/*
 name: Preview
 jobs:
-  preview:
+  build:
     name: Pulumi Preview (Merged Stack)
     runs-on: ubuntu-latest
     steps:
