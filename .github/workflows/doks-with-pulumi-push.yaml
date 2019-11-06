@@ -18,5 +18,6 @@ jobs:
           args: up
         env:
           PULUMI_ROOT: doks-with-pulumi/
+          PULUMI_CI_SYSTEM: Pulumi Workflow
           PULUMI_ACCESS_TOKEN: ${{ secrets.PULUMI_ACCESS_TOKEN }}
           PULUMI_CI: up
